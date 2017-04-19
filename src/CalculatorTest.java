@@ -6,16 +6,6 @@ import static org.junit.Assert.*;
  * Created by d.bukanov on 4/13/2017.
  */
 public class CalculatorTest {
-   /* @org.junit.Before
-    public void setUp() throws Exception {
-        System.out.println("TESTS STARTED...");
-    }
-
-    @org.junit.After
-    public void tearDown() throws Exception {
-        System.out.println("...TESTS FINISHED");
-    }*/
-
     @org.junit.Test
     public void addition_2Plus5_7Returned() throws Exception {
         Calculator testCalc = new Calculator();
