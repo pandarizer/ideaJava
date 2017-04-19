@@ -1,0 +1,1 @@
+Sample project to get some practice with Java and GIT.
