@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class MainClass {
     public static void main(String[] args) {
         System.out.println(" |Enter expression. Example: a + b; a * b|");
-        System.out.println("***Remember not put space between operators and operands!***")
+        System.out.println("***Remember not put space between operators and operands!***");
         Pattern pat = Pattern.compile(" ");
         Scanner in = new Scanner(System.in);
         while (true) {
