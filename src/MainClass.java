@@ -7,7 +7,8 @@ import java.util.regex.Pattern;
  */
 public class MainClass {
     public static void main(String[] args) {
-        System.out.println("Dat awesum IDE lel");
+        System.out.println(" |Enter expression. Example: a + b; a * b|");
+        System.out.println("***Remember not put space between operators and operands!***")
         Pattern pat = Pattern.compile(" ");
         Scanner in = new Scanner(System.in);
         while (true) {
@@ -28,11 +29,11 @@ public class MainClass {
                         Calculator.Division(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
                         break;
                     default:
-                        System.out.println("not working lel");
+                        System.err.println("something went wrong");
                         break;
                 }
             } catch (Exception e) {
-                System.out.println("only digits");
+                System.err.println("input error");
             }
         }
         // System.out.println(lel);
