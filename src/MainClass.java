@@ -12,10 +12,10 @@ public class MainClass {
         Pattern pat = Pattern.compile(" ");
         Scanner in = new Scanner(System.in);
         double res = 0;
-        ICalcInterface add = (x,y) -> x+y;
-        ICalcInterface sub = (x,y) -> x-y;
-        ICalcInterface mul = (x,y) -> x*y;
-        ICalcInterface div = (x,y) -> x/y;
+        ICalcInterface<Double> add = (x, y) -> x + y;
+        ICalcInterface<Double> sub = (x, y) -> x - y;
+        ICalcInterface<Double> mul = (x, y) -> x * y;
+        ICalcInterface<Double> div = (x, y) -> x / y;
         while (true) {
             try {
                 String input = in.nextLine();
@@ -45,7 +45,6 @@ public class MainClass {
                 System.err.println("input error");
             }
         }
-        // System.out.println(lel);
     }
 }
 
