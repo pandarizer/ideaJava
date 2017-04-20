@@ -11,22 +11,31 @@ public class MainClass {
         System.out.println("Remember not put space between operators and operands");
         Pattern pat = Pattern.compile(" ");
         Scanner in = new Scanner(System.in);
+        double res = 0;
+        ICalcInterface add = (x,y) -> x+y;
+        ICalcInterface sub = (x,y) -> x-y;
+        ICalcInterface mul = (x,y) -> x*y;
+        ICalcInterface div = (x,y) -> x/y;
         while (true) {
             try {
                 String input = in.nextLine();
                 String[] exp = pat.split(input);
                 switch (exp[1]) {
                     case "+":
-                        Calculator.Addition(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        res = add.calculate(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        System.out.println(res);
                         break;
                     case "-":
-                        Calculator.Substarction(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        res = sub.calculate(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        System.out.println(res);
                         break;
                     case "*":
-                        Calculator.Multiply(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        res = mul.calculate(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        System.out.println(res);
                         break;
                     case "/":
-                        Calculator.Division(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        res = div.calculate(Double.parseDouble(exp[0]), Double.parseDouble(exp[2]));
+                        System.out.println(res);
                         break;
                     default:
                         System.err.println("something went wrong");
